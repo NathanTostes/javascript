@@ -1,0 +1,17 @@
+<script>
+    function impMaior (v1, v2){
+        if (v1 > v2){
+            document.write(`${v1}`);
+        } else {
+            if (v2 > v1) {
+            document.write(`${v2}`);
+            } else {
+                document.write(`Valores iguais`);
+            }
+        }
+    }
+
+    v1 = parseInt(prompt('Digite um valor:'));
+    v2 = parseInt(prompt('Digite outro valor:'));
+    impMaior(v1, v2);
+</script>
