@@ -1,0 +1,13 @@
+<script>
+    var m1, m2, m3;
+
+    m1 = parseFloat(prompt('Digite o valor de m1:'))
+    m2 = parseFloat(prompt('Digite o valor de m2:'))
+    m3 = parseFloat(prompt('Digite o valor de m3:'))
+
+    if (m1 >= m2 + m3 || m2 >= m1 + m3 || m3 >= m1 + m2){
+        document.write(`Os lados informados não podem criar um triângulo:`)
+    } else {
+        document.write(`Os lados informados podem criar um triângulo:`)
+    }
+</script>

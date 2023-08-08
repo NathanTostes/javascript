@@ -1,0 +1,13 @@
+<script>
+    var base, altura, perimetro;
+
+    base = parseFloat(prompt('Digite o valor da base do retângulo:'))
+    altura = parseFloat(prompt('Digite o valor da altura do retângulo:'))
+
+    function calPerimetro(base, altura) {
+        perimetro = 2 * (base + altura)
+        document.write(`Perímetro do retângulo: ${perimetro}`)
+    }
+
+    calPerimetro(base, altura)
+</script>
