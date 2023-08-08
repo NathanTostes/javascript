@@ -1,0 +1,14 @@
+<script>
+    var nome, sexo, estCiv, temCas;
+
+    nome = prompt('Digite seu nome:')
+    sexo = prompt('Digite seu sexo:')
+    estCiv = prompt('Digite seu estado civil:')
+
+    if (sexo == 'F' && estCiv == 'CASADA'){
+        temCas = prompt('Digite seu tempo de casada')
+        document.write(`Nome: ${nome} <br> Sexo: ${sexo} <br> Estado Civil: ${estCiv} <br> Tempo de Casada: ${temCas}`)
+    } else{
+        document.write(`Nome: ${nome} <br> Sexo: ${sexo} <br> Estado Civil: ${estCiv}`)
+    }
+</script>
