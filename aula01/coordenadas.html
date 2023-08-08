@@ -1,0 +1,28 @@
+<script>
+    var x, y;
+
+    x = parseInt(prompt('Digite a coordenada x'));
+    y = parseInt(prompt('Digite a coordenada y'));
+
+    if (x == 0 && y == 0) {
+        document.write(`O ponto está na origem do plano`)
+    }
+    if (x == 0 && y > 0) {
+        document.write(`O ponto está no eixo y do plano`)
+    }        
+    if (x > 0 && y == 0) {
+    document.write(`O ponto está no eixo x do plano`)
+    }
+    if (x > 0 && y > 0) {
+    document.write(`O ponto está no quadrante 1`)
+    }
+    if (x < 0 && y > 0) {
+    document.write(`O ponto está no quadrante 2`)
+    }
+    if (x < 0 && y < 0) {
+    document.write(`O ponto está no quadrante 3`)
+    }
+    if (x > 0 && y < 0) {
+    document.write(`O ponto está no quadrante 4`)
+    }
+</script>

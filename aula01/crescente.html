@@ -1,0 +1,53 @@
+<script>
+    var n1, n2, n3, maior, menor, medio;
+
+    n1 = parseInt(prompt('Digite o primeiro número:'))
+    n2 = parseInt(prompt('Digite o segundo número:'))
+    n3 = parseInt(prompt('Digite o terceiro número:'))
+
+    // Verificando se o primeiro número é o maior
+    if (n1 > n2 && n1 > n3){
+        maior = n1
+
+        // Verificando o valor médio caso o primeiro número seja o maior
+        if (n2 > n3){
+        medio = n2
+        menor = n3
+        } else {
+        medio = n3
+        menor = n2
+        }
+
+    } else {
+
+        // Verificando se o segundo número é o maior
+        if (n2 > n1 && n2 > n3){
+            maior = n2
+
+            // Verificando o valor médio caso o segundo número seja o maior
+            if (n1 > n3){
+            medio = n1
+            menor = n3
+            } else {
+            medio = n3
+            menor = n1
+            }
+
+            // Terceiro número é o maior 
+            } else {
+            maior = n3
+
+            // Verificando o valor menor valor no caso do terceiro número ser o maior
+            if (n1 > n2){
+            medio = n1
+            menor = n2
+            } else {
+            medio = n2
+            menor = n1
+            }
+
+        }
+    }
+
+    document.write(`A ordem crescentes dos valores digitados é: ${maior}, ${medio}, ${menor}`)
+</script>
