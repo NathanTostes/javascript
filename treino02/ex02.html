@@ -1,0 +1,39 @@
+<meta charset="UTF-8">
+
+<script>
+
+var valor, des, cod
+
+
+valor = parseInt(prompt("Digite o valor dos produtos"))
+
+cod = parseInt(prompt("Digite o codigo da forma de pagamento"))
+
+switch (cod) {
+
+    case 1: 
+    des = valor*0.9
+
+    break
+
+    case 2: 
+    des = valor*0.85
+
+    break
+
+    case 3: 
+
+    break
+
+    case 4: 
+    des = valor*1.1
+
+    break
+}
+
+document.write("O valor a pagar é ", des )
+
+
+
+
+</script>

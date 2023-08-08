@@ -1,0 +1,35 @@
+<meta charset="UTF-8">
+
+<script>
+    n1 = parseFloat(prompt('Nota 1:'))
+    n2 = parseFloat(prompt('Nota 2:'))
+    n3 = parseFloat(prompt('Nota 3:'))
+    opt = prompt('Opção você deseja usar:')
+
+    function medSomMai (n1, n2, n3){
+        if (opt == "A"){
+            res = (n1 + n2 + n3) / 3
+            optText = 'da média aritmética'
+        }
+        if (opt == "S"){
+            res = n1 + n2 + n3
+            optText = 'da soma'
+        }
+        if (opt == "M") {
+            if(n1 > n2 && n1 > n3){
+                res = n1
+            } else {
+                if (n2 > n1 && n2 > n3){
+                    res = n2
+                } else {
+                    res = n3
+                }
+            }
+            optText = 'do maior número'
+        }
+        return res;
+    }
+
+    medSomMai(n1, n2, n3)
+    document.write(`O valor ${optText} é ${res}`)
+</script>

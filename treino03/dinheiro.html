@@ -1,0 +1,14 @@
+<script>
+
+    valor = parseFloat(prompt('Digite um valor: '))
+
+    function converteDinheiro(valor){
+        dinheiro = `R$ ${valor.toFixed(2)}`;
+        dinheiro = dinheiro.replace('.',',');
+        
+        document.write(`${dinheiro}`);
+    }
+
+    converteDinheiro(valor);
+    
+</script>

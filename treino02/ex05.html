@@ -1,0 +1,30 @@
+<meta charset="UTF-8">
+    
+</body>
+</html>
+
+<script>
+    nota = parseFloat(prompt('Média final:'));
+
+    function defConc(nota) {
+    if (0 <= nota && nota < 5){
+        conc = "D";
+    } else {
+        if (5 <= nota && nota < 7){
+            conc = "C";
+        } else {
+            if (7 <= nota && nota < 9){
+                conc = "A";
+            } else{
+                if (9 <= nota && nota <= 10){
+                    conc = "B";
+                }
+            }
+        }
+    }  
+    return conc;
+    }
+
+    defConc(nota);
+    document.write(`Seu conceito é: ${conc}`);
+</script>

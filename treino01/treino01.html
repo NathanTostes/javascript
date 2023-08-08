@@ -1,0 +1,19 @@
+<script>
+    var num1, num2;
+
+    num1 = parseInt(prompt('Digite um número:'))
+    num2 = parseInt(prompt('Digite outro número:'))
+    if (num1 % 2 == 0 && num2 % 2 == 0){
+        document.write(`Ambos os números são pares`)
+    } else {
+        if (num1 % 2 == 0){
+            document.write(`Apenas o número 1 é par`)
+        } else {
+            if (num2 % 2 == 0){
+                document.write(`Apenas o número 2 é par`)
+            } else {
+                document.write(`Nenhum dos números é par`)
+            }
+        }
+    }
+</script>
