@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aumentar e diminuir fonte</title>
+</head>
+<body>
+    <!-- Área de texto que terá sua fonte alterada -->
+    <textarea id="textArea" cols="10" rows="4" style="font-size: 50px;"></textarea>
+    <!-- Botões para alterar fonte -->
+    <button onclick="increaseFont()">Aumentar Fonte</button>
+    <button onclick="decreaseFont()">Diminuir Fonte</button>
+
+    <script>
+        // Atribuindo a fonte da área de texto a uma variável
+        // Função que aumenta a fonte
+        function increaseFont() {
+            // Atribuido o valor da fonte a uma variável
+            let textArea = document.getElementById("textArea").style.fontSize;
+            // Transformando valor em inteiro
+            textArea = parseInt(textArea);
+            // Aumentando os pixels do tamanho da fonte
+            textArea = textArea + 5 + "px";
+            // Mudando o tamanho da fonte do elemento
+            document.getElementById("textArea").style.fontSize = textArea;
+        }
+        // Função que diminui a fonte
+        function decreaseFont() {
+            // Atribuido o valor da fonte a uma variável
+            let textArea = document.getElementById("textArea").style.fontSize;
+            // Transformando valor em inteiro
+            textArea = parseInt(textArea);
+            // Teste para não permitir que a fonte chegue a 0
+            if (textArea <= 10) { 
+                return;
+            }
+            // Diminuido os pixels do tamanho da fonte
+            textArea = textArea - 5 + "px";
+            // Mudando o tamanho da fonte do elemento
+            document.getElementById("textArea").style.fontSize = textArea;
+        }
+    </script>
+</body>
+</html>

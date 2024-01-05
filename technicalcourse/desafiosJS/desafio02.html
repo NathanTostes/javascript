@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Cliques</title>
+</head>
+<body>
+    <!-- Botão indicador de cliques -->
+    <button id="value" onclick="addValue()">0</button>
+
+    <script>
+        function addValue() {
+            // Pegando o valor que o botão possui
+            let value = document.getElementById("value").innerText;
+            // Transformando variável em inteiro e somando ao botão
+            value = parseInt(value) + 1;
+            // Transformando variável em string e a atribuindo ao texto dentro do botão
+            document.getElementById("value").innerText = value.toString();        
+        }
+    </script>
+</body>
+</html>

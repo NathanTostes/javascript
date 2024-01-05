@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="selEsquerda" size="3">
+        <option value="Item_1">Item 1</option>
+        <option value="Item_2">Item 2</option>
+        <option value="Item_3">Item 3</option>
+    </select>
+
+    <button onclick="moverEsquerda()"><<</button>
+    <button onclick="moverDireita()">>></button>
+
+    <select id="selDireita" size="3">
+
+    </select>
+
+    <script>
+        function moverDireita(){
+
+            const selEsquerda = document.getElementById('selEsquerda')
+            const selDireita = document.getElementById('selDireita')
+
+            for (const opt of selEsquerda.children) {
+                if (opt.value == selEsquerda.value){
+                    selDireita.appendChild(opt)
+                }
+            }
+
+        }
+
+        function moverEsquerda(){
+
+        const selEsquerda = document.getElementById('selEsquerda')
+        const selDireita = document.getElementById('selDireita')
+
+        for (const opt of selDireita.children) {
+        if (opt.value == selDireita.value){
+            selEsquerda.appendChild(opt)
+        }
+        }
+
+        }
+    </script>
+</body>
+</html>

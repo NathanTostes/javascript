@@ -1,0 +1,26 @@
+<script>
+
+    vetorIni = [];
+    vetorFat = [];
+
+    function calcFat(n) {
+        fatorial = n;
+        if (n < 0) return null;
+        if (n == 0) return 1;
+        if (n > 0) {
+            --n;
+            return fatorial *= calcFat(n);
+        }
+    }
+
+    for (i = 0; i < 15; ++i) {  
+        vetorIni[i] = parseInt(prompt("Digite um número:"));
+    }
+
+    for (i = 0; i < 15; ++i) {
+        vetorFat[i] = calcFat(vetorIni[i]);
+    }
+
+    document.write(vetorIni, "<br>", vetorFat);
+
+</script>

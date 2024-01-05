@@ -1,0 +1,15 @@
+<script>
+
+    values = [];
+    countNegative = 0;
+
+    for (count = 0; count < 6; ++count){
+        values[count] = parseInt(prompt("Digite um valor:"));
+        if (values[count] < 0) {
+            ++countNegative;
+        }
+    }
+
+    document.write(`Quantidade de valores negativos: ${countNegative}`);
+
+</script>

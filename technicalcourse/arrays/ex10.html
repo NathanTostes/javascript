@@ -1,0 +1,25 @@
+<script>
+
+    k = [];
+    n = [];
+    m = [];
+
+    for(i = 0; i < 10; ++i){
+        k[i] = parseInt(prompt("Digite um número:"));
+    }
+
+    for(i = 0; i < 10; ++i){
+        n[i] = parseInt(prompt("Digite um número:"));
+    }
+
+    for(i = 0; i < 10; ++i){
+        m[i] = k[i] - n[i];
+    }
+    
+    document.write(`
+    ${k} <br>
+    ${n} <br>
+    ${m} <br>
+    `)
+
+</script>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Removedor de Opções</title>
+</head>
+<body>
+    <!-- Select com as opções a serem removidas -->
+    <select id="options">
+        <option value="1" id="1">1</option>
+        <option value="2" id="2">2</option>
+        <option value="3" id="3">3</option>
+        <option value="4"  id="4">4</option>
+        <option value="5" id="5">5</option>
+        <option value="6" id="6">6</option>
+        <option value="7" id="7">7</option>
+        <option value="8" id="8">8</option>
+        <option value="9" id="9">9</option>
+        <option value="10" id="10">10</option>
+    </select>
+    <!-- Botão que irá desparar o evento passando a função que removerá o botão -->
+    <button onclick="deleteOption()">Deletar Opção</button>
+</body>
+<script>
+    // Função que irá remover o a opção
+    function deleteOption () {
+        // Variável referente ao select com as opções
+        options = document.getElementById("options");
+        // Variável com o valor referente à opção selecionada
+        valueRemoved = document.getElementById("options").value;
+        // Atribuindo o valor ao id da opção que será removida
+        elementRemoved = document.getElementById(valueRemoved);
+        // Removendo o elemento filho (opção selecionada no select)
+        options.removeChild(elementRemoved);
+    }
+</script>
+</html>

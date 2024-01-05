@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criador de Elementos</title>
+</head>
+<body>
+    <!--  Opções de tags que podem ser adicionadas -->
+    <select id="select">
+        <option value="p">p</option>
+        <option value="h1">h1</option>
+        <option value="h2">h2</option>
+        <option value="h3">h3</option>
+        <option value="h4">h4</option>
+        <option value="h5">h5</option>
+        <option value="h6">h6</option>
+    </select>
+    <!-- Texto a ser adicionado dentro da tag -->
+    <input type="text" id="text">
+    <!-- Botão para acionar a adição do elemento -->
+    <button onclick="addElement()">Adicionar Elemento</button>
+    <br>
+    <!-- Área onde os elementos serão adicionados -->
+    <div id="area"></div>
+
+    <script>
+        // Função para adicionar o elemento definido na página
+        function addElement() {
+            // Criação de um elemento com a tag anteriormente definida
+            let element = document.createElement(select.value);
+            // Adição do texto definido dentro do elemento criado
+            element.innerText = document.getElementById("text").value;
+            // Adição do elemento criado à página
+            document.getElementById("area").append(element);
+        }
+    </script>
+</body>
+</html>

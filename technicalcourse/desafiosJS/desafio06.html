@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Intervalo</title>
+</head>
+<body>
+    <!-- Criando o contador do intervalo -->
+    <h1>Contador:</h1>
+    <p id="count" style="font-size: 50px;">10</p>
+
+    <script>
+        // Definindo o valor inicial da contagem
+        document.getElementById("count").innerHTML = 10;
+        // Definindo uma variável de contagem
+        count = document.getElementById("count").innerHTML;
+        // Definindo um intervalo para função se iniciar
+        ref = setInterval(intervals, 1000);
+
+        // Função que o intervalo chama
+        function intervals() {
+            //Diminuindo a contagem e atribuindo ao contador
+            count = parseInt(count) - 1;
+            document.getElementById("count").innerHTML = count;
+            // Definindo a condição para o fim do intervalo
+            if (count == 0){
+                clearInterval(ref);
+            }
+        }
+    </script>
+</body>
+</html>

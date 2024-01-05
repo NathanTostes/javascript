@@ -1,0 +1,19 @@
+<script>
+
+    //Declarando o vetor "notas"
+    notas = [];
+    //Declarando contador de notas abaixo de 5
+    abaixoCinco = 0;
+
+    //Estrutura de repetição para ler o vetor
+    for(i = 0; i < 10; i++){
+        notas[i] = parseInt(prompt("Digite a nota do aluno:"));
+        //Condicional para identificar valores abaixo de 5
+        if (notas[i] < 5) {
+            abaixoCinco++;            
+        }
+    }
+
+    document.write(`Quantidade de alunos em recuperação: ${abaixoCinco}`);
+
+</script>

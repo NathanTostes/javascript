@@ -1,0 +1,19 @@
+<script>
+    num = parseInt(prompt("Digite um número:"));
+    casa = 10;
+    res = "";
+    soma = 0;
+
+    while(num != 0){
+        casa = num % 10;
+        num = parseInt(num / 10);
+        soma = soma + casa;
+        res += casa + " + ";
+    }
+    
+    
+    res = res.slice(0,res.length-2)
+    res += "= " + soma;
+    
+    document.write(res);
+</script>

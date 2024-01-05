@@ -1,0 +1,21 @@
+<script>
+
+    maior = parseFloat(prompt("Digite um número:"));
+    menor = maior;
+
+    for (count = 1; count <= 9; count++){
+        n = parseFloat(prompt("Digite um número:"));
+        if (n > maior){
+            maior = n;
+        }
+        if (n < menor){
+            menor = n;
+        }
+    }
+
+    document.write(`
+    Menor valor lido: ${menor} <br>
+    O Maior valor lido: ${maior}
+    `);
+    
+</script>

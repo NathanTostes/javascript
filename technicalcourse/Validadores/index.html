@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <script src="index.js" defer></script>  
+    <title></title>
+  </head>
+  <body>
+    <!-- <form name="formDados">
+      <legend>Dados Pessoais</legend>
+      <input name="nome" value="">
+      <input name="email" value="">
+      <select id="sexo">
+          <option value="masculino">Masculino</option>
+          <option value="feminino">Feminino</option>
+      </select>
+      <fieldset name="dados">
+        <input type="radio" name="dependentes" value="0">
+        <input type="radio" name="dependentes" value="1 a 2">
+        <input type="radio" name="dependentes" value="3 ou mais">
+      </fieldset>
+    </form>  -->
+
+    <!-- <form name="formDados">
+        <input name="nome" value="">
+        <div id="nomeErro"></div>
+    </form>
+    <style>
+        .invalid { border-color: red; }
+        #nomeErro { color: red }
+    </style> -->
+
+    <form name="formDados">
+        <input id="nome" name="nome" value="">
+        <div id="nomeErro" class="erro"></div>
+        <input id="email" name="email" value="">
+        <div id="emailErro" class="erro"></div>
+        <input type="submit" value="Enviar">
+    </form>
+    <style>
+      .invalid { border-color: red; }
+      .erro { color: red }
+    </style>
+  </body>
+</html>

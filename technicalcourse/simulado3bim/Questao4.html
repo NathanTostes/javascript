@@ -1,0 +1,17 @@
+<script>
+
+    //Declarando um vetor para guardar o valor das peças
+    pecas = [];
+    //Declarando uma variavel para guardar a soma do valor das pecas
+    somaPecas = 0;
+
+    for (i = 0; i < 5; i++){
+        //Recebendo valor das peças e atribuindo ao vetor
+        pecas[i] = parseFloat(prompt("Digite o valor da peça:"));
+        //Somando valores armazenados ao valor total das pecas
+        somaPecas += pecas[i];
+    }
+
+    document.write(`R$ ${somaPecas.toFixed(2)}`);
+
+</script>

@@ -1,0 +1,24 @@
+1 - for (i = vetor.lenght ; i >= 0; i--) {
+	console.log(vetor[i]);
+    }
+
+2 - let numeros = [12, 15, 18, 21];
+    let pares = [];
+    let impares = [];
+
+    for (i = 0; i < numeros.length; i++) {
+	    if (numeros[i] % 2 == 0){
+		    pares.push(numeros[i]);
+	    } else {
+		    impares.push(numeros[i]);
+	    }
+    }
+
+3 - Em uma estrutura de dados em fila, onde os primeiros valores a entrar são os primeros a sair, e os últimos valores a entrar serão os últimos a sair, podemos utilizar o método shift, para retirarmos um valor do início do vetor, e o método push, para adicionarmos um valor no final do vetor.
+Um exemplo de estrutura assim seria o seguinte:
+
+while (variavelControladora = true){
+	senhas.push(parseInt(prompt("Digite sua senha:");
+	document.write(senhas.shift());
+	variavelControladora = prompt("Continuar? (true/false)");
+}

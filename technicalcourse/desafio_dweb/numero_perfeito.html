@@ -1,0 +1,14 @@
+<script>
+
+    let num = parseInt(prompt("Digite um número:"));
+    let total = 0;
+
+    for (count = 0; count < num; count++){
+        if (num % count == 0) {
+            total += count;
+        }
+    }
+
+    num == total ? document.write(`O número "${num}" é um número perfeito`) : document.write(`O número "${num}" não é perfeito`);
+    
+</script>

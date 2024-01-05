@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios Natalinos</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div>
+        <h1>Lista de Tarefas</h1>
+        <br>
+        <ul>
+            <li id="task1"><input type="checkbox" value="task1" onchange="marked()"> Tarefa 1</li>
+            <li id="task2"><input type="checkbox" value="task2" onchange="marked()"> Tarefa 2</li>
+            <li id="task3"><input type="checkbox" value="task3" onchange="marked()"> Tarefa 3</li>
+        </ul>  
+    </div>
+    <div>
+        <h1>Carrosel de Imagens</h1>
+        <img src="./pinturas/imagem1.jpg.png" id="img">
+        <br>
+        <button onclick="avanca()" class="botao">Avançar</button>
+        <button onclick="volta()" class="botao">Voltar</button>
+    </div>
+    <div>
+        <h1>Cronômetro</h1>
+        <p>
+            <span id="min">00</span>
+            :
+            <span id="seg">00</span>
+            :
+            <span id="mil">000</span>
+        </p>
+        <button onclick="start()" id="startButton">Iniciar</button>
+        <button onclick="stop()" id="stopButton" disabled>Parar</button>
+        <button onclick="start()" id="restartButton" disabled>Continuar</button>
+        <button onclick="reset()" id="resetButton" disabled>Zerar</button>
+    </div>
+    <div>
+        <h1>Barra de Progresso</h1>
+        <div id="progress">
+            <div id="imageProgress"></div>
+            <p id="progressP"><span id="percent">0</span>%</p>
+        </div>
+        <button onclick="startProgress()">Iniciar Processo</button>
+    </div>
+    <button id="adicional" onclick="options()"><</button>
+    <div id="mensage">
+        Feliz Natal e Ano Novo professor Roberto!
+        <br>
+        Obrigado por nos proporcionar este ano repleto de aprendizados
+    </div>
+</body>
+</html>

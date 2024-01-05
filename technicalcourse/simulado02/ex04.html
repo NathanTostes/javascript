@@ -1,0 +1,15 @@
+<script>
+    
+    div = 50000;
+    month = 0;
+
+    while (div > 0){
+        div += div * 0.025;
+        div -= 5000;
+        ++month;
+        document.write(`Mês: ${month} <br> Divida: ${div} <br> - - - <br>`)
+    }
+
+    document.write(`Meses totais para que a divida seja paga: ${month}`);
+
+</script>

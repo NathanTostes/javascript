@@ -1,0 +1,18 @@
+<script>
+
+    d = [];
+    aux = 0;
+
+    for (i = 0; i < 8; ++i){
+        d[i] = parseInt(prompt("Digite um número:"))
+    }
+
+    for (iniI = 0, finI = d.length / 2; finI < d.length; ++iniI, ++finI){
+        aux = d[iniI];
+        d[iniI] = d[finI];
+        d[finI] = aux;
+    }
+
+    document.write(d);
+
+</script>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterar fontes dos parágrafos</title>
+    <style>
+        p {
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Adicionando 5 parágrafos na página -->
+    <p>Parágrafo 1</p>
+    <p>Parágrafo 2</p>
+    <p>Parágrafo 3</p>
+    <p>Parágrafo 4</p>
+    <p>Parágrafo 5</p>
+    <!-- Botões para alterar fonte -->
+    <button onclick="increaseFont()">Aumentar Fonte</button>
+    <button onclick="decreaseFont()">Diminuir Fonte</button>
+
+    <script>
+        // Atribuir todos os parágrafos a um vetor
+        let paragrafos = document.querySelectorAll("p");
+        // Atualizando o tamanho da fonte de todos os elementos
+        for (count = 0; count < paragrafos.length; count++){
+                paragrafos[count].style.fontSize = "50px";
+        }
+        // Aumentando o tamanho da fonte
+        function increaseFont() {
+            for (count = 0; count < paragrafos.length; count++){
+                // Atribuindo o tamanho da fonte a uma variável e a transforma em int
+                fonte = paragrafos[count].style.fontSize;
+                // Aumentando o tamanho da fonte e atribuindo o mesmo ao parágrafo
+                fonte = parseInt(fonte) + 5 + "px";
+                paragrafos[count].style.fontSize = fonte;
+            }
+        }
+        // Diminuindo o tamanho da fonte
+        function decreaseFont() {
+            for (count = 0; count < paragrafos.length; count++){
+                // Atribuindo o tamanho da fonte a uma variável e a transforma em int
+                fonte = paragrafos[count].style.fontSize;
+                fonte = parseInt(fonte);
+                // Teste para não permitir que a fonte chegue a 0
+                if (fonte <= 20) { 
+                    return;
+                }
+                // Diminuindo o tamanho da fonte e atribuindo o mesmo ao parágrafo
+                fonte = fonte - 5 + "px";
+                paragrafos[count].style.fontSize = fonte;
+            }
+        }
+    </script>
+</body>
+</html>

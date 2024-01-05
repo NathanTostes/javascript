@@ -1,0 +1,15 @@
+<script>
+
+    n = parseInt(prompt("Digite um número:"));
+    fatRel = 1;
+    fatTot = 1;
+    mult = 1;
+
+    for (count = 1; count <= n; count++){
+        fatRel *= count;
+        fatTot += 1 / fatRel;
+    }
+
+    document.write(fatTot);
+
+</script>

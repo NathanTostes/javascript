@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Nome: <input type="text" name="nome" id="nome"></p>
+    <p>Idade: <input type="number" name="idade" id="idade"></p>
+    <p>Sexo:
+        <input type="radio" name="sexo" id="sexoM">Masculino
+        <input type="radio" name="sexo" id="sexoF">Feminino
+    </p>
+    <script>
+        inputs = document.getElementsByTagName("input")
+        for (const input of inputs) {
+            input.onfocus = () => input.style.backgroundColor = "#CCCCCC"
+            input.addEventListener("focus", () => input.style.color =
+                "#FF0000")
+            input.onblur = () => input.style.backgroundColor = "#FFFFFF"
+        }
+    </script>
+</body>
+</html>

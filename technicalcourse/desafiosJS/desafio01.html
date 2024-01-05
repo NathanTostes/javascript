@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Troca Cor de Fundo</title>
+</head>
+<body id="body">
+    
+    <!-- Input que recebe o valor da cor escolhida -->
+    <input type="color" id="color">
+    <!-- Botão de chamada da função que troca a cor -->
+    <button onclick="changeColor()">Alterar cor de fundo</button>
+
+    <script>
+        // Pegando o valor do input
+        let color = document.getElementById("color").value;
+        // Função que seleciona o elemento body e troca sua cor de fundo
+        function changeColor(){
+            document.getElementById("body").style.backgroundColor = color;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<style>
+    /* Alterando as propriedades de display da div */
+    div {
+        display: flex;
+        flex-direction: row;
+    }
+</style>
+<body>
+    <!-- Div com os elementos em display flex -->
+    <div>
+        <!-- Seleção de elementos da esquerda -->
+        <select id="leftSelect" size="6" multiple>
+            <option value="vermelho" id="vermelho">Vermelho</option>
+            <option value="verde" id="verde">Verde</option>
+            <option value="amarelo" id="amarelo">Amarelo</option>
+        </select>
+        <!-- Botão para trocar a opção para direita -->
+        <button onclick="toRight()">>></button>
+        <!-- Botão para trocar a opção para esquerda -->
+        <button onclick="toLeft()"><<</button>
+        <!-- Seleção de elementos da direita -->
+        <select id="rightSelect" size="6" multiple>
+            <option value="azul" id="azul">Azul</option>
+            <option value="rosa" id="rosa">Rosa</option>
+            <option value="marrom" id="marrom">Marrom</option>
+        </select>
+    </div>
+</body>
+<script>
+    // Função que irá trocar a opção da esquerda para direita
+    function toRight () {
+        // Atribuindo o select da direita a uma variável
+        rightSelect = document.getElementById("rightSelect");
+        // Atribuindo o valor do select da esquerda a uma variável
+        leftSelectValue = document.getElementById("leftSelect").value;
+        removedElement = document.getElementById(leftSelectValue);
+        rightSelect.appendChild(removedElement);
+    }
+    // Função que irá trocar a opção da direita para esquerda
+    function toLeft () {
+        // Atribuindo o select da esquerda a uma variável
+        leftSelect = document.getElementById("leftSelect");
+        // Atribuindo o valor do select da direita a uma variável
+        rightSelectValue = document.getElementById("rightSelect").value;
+        // 
+        removedElement = document.getElementById(rightSelectValue);
+        leftSelect.appendChild(removedElement);
+    }
+</script>
+</html>

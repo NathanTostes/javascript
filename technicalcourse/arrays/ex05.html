@@ -1,0 +1,21 @@
+<script>
+
+    x = [];
+    
+
+
+    for(count = 0; count < 10; ++count){
+        x[count] = parseInt(prompt("Digite um valor:"));
+    }
+
+    document.write (`${x} <br>`);
+
+    for(count = 0; count < 10; ++count){
+        if(x[count] == 0){
+            x[count] += 1;
+        }
+    }
+
+    document.write(x);
+
+</script>

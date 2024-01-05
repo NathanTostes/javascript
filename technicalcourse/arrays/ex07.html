@@ -1,0 +1,27 @@
+<script>
+
+    vetor = [];
+
+    for(i = 0; i < 20; ++i) {
+        vetor[i] = parseInt(prompt("Digite um número:"));
+    }    
+
+    for(i = 0; i < 20; ++i) {
+        document.write(`Casa ${i}: ${vetor[i]} <br>`);
+    }
+
+    for(modMen = 0, modMai = 19; modMen < modMai; ++modMen, --modMai){
+        menor = vetor[modMen];
+        maior = vetor[modMai];
+
+        vetor[modMen] = maior;
+        vetor[modMai] = menor;
+    }
+
+    document.write(`<br> - - - - - - <br>`)
+
+    for(i = 0; i < 20; ++i) {
+        document.write(`Casa ${i}: ${vetor[i]} <br>`);
+    }
+
+</script>
