@@ -1,2 +1,2 @@
 # javascript
- Repositório referente aos meus estudos de javascript
+ Repository for my javascript studies
