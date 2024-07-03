@@ -3,17 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercício </title>
+    <title>Exercício 07</title>
 </head>
 <body>
     
 </body>
 <script>
-    function swap(number1, number2) {
-        swap = number1;
+    function swap() {
+        let number1 = parseInt(prompt("Digite o valor de X:"));
+        let number2 = parseInt(prompt("Digite o valor de Y:"));
+        document.write("Valor de X pré swap = " + number1 + "<br>Valor de Y pré swap = " + number2 + "<br>");
+        let swap = number1;
         number1 = number2;
         number2 = swap;
+        document.write("Valor de X pós swap = " + number1 + "<br>Valor de Y pós swap = " + number2 + "<br>");
     }
+    swap();
 </script>
 </html>
 

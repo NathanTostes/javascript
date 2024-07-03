@@ -3,9 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Exercício 13</title>
+    <style>
+        #title {
+            text-align: center;
+        }
+        #grid {
+            display: flexbox;
+            align-items: center;
+            row-gap: 10px;
+            text-align: center;
+        }
+        #button {
+            display: inline-block;
+            background: rgb(248, 196, 239);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+        }
+        #verticalText {
+            position: relative;
+            top: 30%;
+        }
+    </style>
 </head>
 <body>
-    
+    <h1 id="title">Clique em um botão para executar sua função</h1>
+    <div id="grid">
+        <div id="button" onclick="printSorte()">
+            <div id="verticalText">1</div>
+        </div>
+        <div id="button" onclick="printInformatica()">
+            <div id="verticalText">2</div>
+        </div>
+        <div id="button" onclick="calculateSquareOfNumber()">
+            <div id="verticalText">3</div>
+        </div>
+        <div id="button" onclick="calculateCubeOfNumber()">
+            <div id="verticalText">4</div>
+        </div>
+        <div id="button" onclick="evenOrOdd()">
+            <div id="verticalText">5</div>
+        </div>
+        <div id="button" onclick="printFlamengoIsTheChampion()">
+            <div id="verticalText">6</div>
+        </div>
+        <div id="button" onclick="swap()">
+            <div id="verticalText">7</div>
+        </div>
+    </div>
 </body>
+<script>
+    function printSorte() {
+        for(i = 0; i < 100; i++) {
+            document.write("SORTE<br>");
+        }
+    }
+
+    function printInformatica() {
+        let times = parseInt(prompt("Quantas vezes digitar informática?"));
+        for(i = 0; i < times; i++) {
+            document.write("INFORMÁTICA<br>");
+        }
+    }
+
+    function calculateSquareOfNumber() {
+        let number = parseInt(prompt("Insira um número para calcularmos seu quadrado: "));
+        document.write("A raíz quadrada de " + number + " é: " + Math.pow(number, 2));
+    }
+
+    function calculateCubeOfNumber() {
+        let number = parseInt(prompt("Insira um número para calcularmos seu cubo: "));
+        document.write("A raíz cúbica de " + number + " é: " +  Math.pow(number, 3));
+    }
+
+    function evenOrOdd() {
+        let number = parseInt(prompt("Digite um número para saber se este é par ou ímpar:"));
+        let evenOrOdd = number % 2 == 0 ? "par" : "ímpar";
+        document.write(number + " é " + evenOrOdd);
+    }
+
+    function printFlamengoIsTheChampion() {
+        for(i = 0; i < 10000; i++) {
+            document.write("FLAMENGO CAMPEÃO<br>");
+        }
+    }
+
+    function swap() {
+        let number1 = parseInt(prompt("Digite o valor de X:"));
+        let number2 = parseInt(prompt("Digite o valor de Y:"));
+        document.write("Valor de X pré swap = " + number1 + "<br>Valor de Y pré swap = " + number2 + "<br>");
+        let swap = number1;
+        number1 = number2;
+        number2 = swap;
+        document.write("Valor de X pós swap = " + number1 + "<br>Valor de Y pós swap = " + number2 + "<br>");
+    }
+</script>
 </html>

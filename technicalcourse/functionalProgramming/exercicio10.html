@@ -9,18 +9,16 @@
     
 </body>
 <script>
-    function calculateParallelepipedDiagonal(heigth, width, depth) {
-        heigth = Math.pow(heigth);
-        width = Math.pow(width);
-        depth = Math.pow(depth);
-        sqrt = Math.sqrt(heigth + width + depth);
-        return sqrt;
+    function calculateParallelepipedDiagonal() {
+        let heigth = parseFloat(prompt("Digite a altura do paralelepípedo:"));
+        let width = parseFloat(prompt("Digite a largura do paralelepípedo:"));
+        let depth = parseFloat(prompt("Digite a profundidade do paralelepípedo:"));
+        heigth = Math.pow(heigth, 2);
+        width = Math.pow(width, 2);
+        depth = Math.pow(depth, 2);
+        let diagonal = Math.sqrt(heigth + width + depth);
+        document.write("A diagonal do paralelepípido é " + diagonal);
     }
-
-    heigth = parseInt(prompt("Digite a altura do paralelepípedo:"));
-    width = parseInt(prompt("Digite a largura do paralelepípedo:"));
-    depth = parseInt(prompt("Digite a profundidade do paralelepípedo:"));
-
-    document.write("A diagonal do paralelepípido é " + calculateParallelepipedDiagonal(heigth, width, depth));
+    calculateParallelepipedDiagonal();
 </script>
 </html>

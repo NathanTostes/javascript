@@ -3,18 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercício </title>
+    <title>Exercício 09</title>
 </head>
 <body>
     
 </body>
 <script>
-    function returnFatorial(number) {
-        fatorial = number;
-        for(i = number; i > 1; i--) {
-            number *= i;
+    function calculateFatorial() {
+        let number = parseInt(prompt("Digite um número para calcularmos seu fatorial: "));
+        let fatorial = number;
+        for(i = fatorial - 1; i > 1; i--) {
+            fatorial *= i;
         }
         document.write("O fatorial de " + number + " é " + fatorial);
     }
+    calculateFatorial();
 </script>
 </html>
